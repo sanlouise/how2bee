@@ -1,6 +1,9 @@
 <nav>
   <div class="nav-wrapper amber darken-2">
-    <%= link_to 'How 2 Bee', root_path, class: "brand-logo center" %>
+    <div class="brand-logo center">
+      <%= link_to "How 2 Bee", root_path, class: "logo-text" %>
+      <%= link_to image_tag("LogoIcon.png", class: "logo-icon"), root_path %>
+    </div>
     <a class="button-collapse" data-activates="mobile-demo" href="#"><i class="fa fa-bars"></i></a>
     <ul class="right hide-on-med-and-down">
       <li><%= link_to "All Articles", '#' %></li>
