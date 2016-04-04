@@ -1,0 +1,31 @@
+// Footer
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.fa-facebook, .fa-linkedin, .fa-bars {
+  color: white;
+}
+
+footer li {
+  padding: 0.5em 0 0.5em 0;
+}
+
+footer .row .col.offset-l2 {
+  margin-top: 0em;
+}
+
+.social-home {
+  margin-top: 5em !important;
+}
+
+// Navbar
+.fa-bars {
+  padding-left: 15px;
+}
