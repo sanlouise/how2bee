@@ -8,8 +8,8 @@ class LoginsController < ApplicationController
     if user && user.authenticate(params[:password])
       
       session[:user_id] = user.id
-      flash[:success] = "Welcome #{user.name}! You are now logged in."
-      redirect_to blogs_path
+      flash[:success] = "Welcome #{user.username}! You are now logged in."
+      redirect_to articles_path
       
     else
       flash.now[:danger] = "Your email address or password does not match."
@@ -18,7 +18,7 @@ class LoginsController < ApplicationController
   end
   
   def destroy
-    session[:chef_id] = nil
+    session[:user_id] = nil
     flash[:success] = "You are now logged out."
     redirect_to root_path
   end

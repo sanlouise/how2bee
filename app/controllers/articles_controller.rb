@@ -1,10 +1,11 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_articles, only: [:index, :show]
+  before_action :require_user, except: [:show, :index]
 
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
   end
 
   # GET /articles/1
@@ -56,7 +57,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
+      format.html { redirect_to articles_path, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -66,9 +67,13 @@ class ArticlesController < ApplicationController
     def set_article
       @article = Article.find(params[:id])
     end
+    
+    def set_articles
+      @articles = Article.all
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :description, :content, :image)
+      params.require(:article).permit(:title, :content, :description, :image)
     end
 end
