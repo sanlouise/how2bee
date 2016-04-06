@@ -1,8 +1,15 @@
 <!--<h2 class="center home-header">Beekeeping made for everyone.</h2>-->
 <div class="col s12 center">
-  <%= video_tag("home.mp4", :controls => false, 
+  <div class="row">
+    <h2 class="center orange-text">Learn how to 
+    <%= link_to "raise bees", articles_path, class: "btn-large light-green waves-effect waves-light" %>
+    today.</h2>
+  </div>
+  
+  <%= link_to video_tag("home.mp4", :controls => false, 
                             :autobuffer => true, 
                             :autoplay => true, 
                             :loop => true, 
-                            :class => "responsive-video home-video") %>
+                            :class => "responsive-video home-video"), 
+                            articles_path %>
 </div>
