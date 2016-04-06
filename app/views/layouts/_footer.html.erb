@@ -1,33 +1,52 @@
 <footer class="page-footer amber">
   <div class="container">
+    
     <div class="row">
-      
       <!--First Column Footer-->
-      <div class="col l3 offset-l2 s12 center">
+      <div class="col s12 l4 center">
         <ul>
           <li><%= link_to "Articles", articles_path, class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
           <li><%= link_to "About", about_path, class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
+        </ul>
+      </div>
+      
+      <!--Social Media-->
+      <div class="col s12 l4 center social-media">
+        <!--Facebook Link-->
+        <%= link_to "https://www.facebook.com/How-2-Bee-442695985906764/" do %>
+          <i class="fa fa-facebook fa-2x btn-floating btn-large waves-effect waves-light black"></i>
+        <% end %>
+        
+        <!--Linkedin Link-->
+        <%= link_to 'https://www.linkedin.com/company/how-2-bee' do %>
+          <i class="fa fa-linkedin fa-2x btn-floating btn-large waves-effect waves-light black"></i>
+        <% end %>
+        
+        <!--Twitter Link-->
+        <%= link_to 'https://twitter.com/How_2_Bee' do %>
+          <i class="fa fa-twitter fa-2x btn-floating btn-large waves-effect waves-light black"></i>
+        <% end %>
+        
+        <!--Google+ Link-->
+        <%= link_to 'https://www.google.com/+How2beeGP' do %>
+          <i class="fa fa-google-plus fa-2x btn-floating btn-large waves-effect waves-light black"></i>
+        <% end %>
+        
+        <!--Pinterest Link-->
+        <%= link_to 'https://pinterest.com/how2beepin/' do %>
+          <i class="fa fa-pinterest fa-2x btn-floating btn-large waves-effect waves-light black"></i>
+        <% end %>
+      </div>
+      
+      <!--Second Column Footer-->
+      <div class="col s12 l4 center">
+        <ul>
           <li><%= link_to "Contact", contact_path, class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
           <li><%= link_to "Legal", legal_path, class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
         </ul>
       </div>
-      
-      <!--Second Column Footer-->
-      <div class="col l3 offset-l1 s12 center social-home">
-        <!--Facebook Link-->
-        <%= link_to '#' do %>
-          <i class="fa fa-facebook fa-2x btn-floating btn-large waves-effect waves-light black"></i>
-        <% end %>
-        
-        <!--Pipe Separator-->
-         | 
-        
-        <!--Linkedin Link-->
-        <%= link_to '#' do %>
-          <i class="fa fa-linkedin fa-2x btn-floating btn-large waves-effect waves-light black"></i>
-        <% end %>
-      </div>
-      
+    </div>
+    
     </div>
   </div>
   
