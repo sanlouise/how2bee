@@ -6,9 +6,17 @@
     </div>
     <a class="button-collapse" data-activates="mobile-demo" href="#"><i class="fa fa-bars"></i></a>
     <ul class="right hide-on-med-and-down">
+      <% if current_user %>
+        <li class="user-nav">Welcome <span class="black-text"><%= current_user.username %></span>
+        <%= " | Admin" if current_user.admin? %></li>
+      <% end %>
       <li><%= link_to "Articles", articles_path %></li>
     </ul>
     <ul id="mobile-demo" class="side-nav" style="left: -250px;">
+      <% if current_user %>
+        <li>Welcome <span class="black-text"><%= current_user.username %></span>
+        <%= " | Admin" if current_user.admin? %></li>
+      <% end %>
       <li><%= link_to "Articles", articles_path %></li>
     </ul>
   </div>

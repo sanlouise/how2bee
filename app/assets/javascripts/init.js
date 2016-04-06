@@ -5,4 +5,5 @@ $(document).ready(function(){
   $('.collapsible').collapsible();
   $('.parallax').parallax();
   $('.tabs-wrapper .row').pushpin({ top: $('.tabs-wrapper').offset().top });
+  $('select').material_select();
 });
