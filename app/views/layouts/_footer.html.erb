@@ -5,15 +5,15 @@
       <!--First Column Footer-->
       <div class="col l3 offset-l2 s12 center">
         <ul>
-          <li><%= link_to "Articles", '#', class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
-          <li><%= link_to "Learn", '#', class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
-          <li><%= link_to "Prepare", '#', class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
-          <li><%= link_to "Do", '#', class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
+          <li><%= link_to "Articles", articles_path, class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
+          <li><%= link_to "About", about_path, class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
+          <li><%= link_to "Contact", contact_path, class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
+          <li><%= link_to "Legal", legal_path, class: "btn waves-effect waves-light amber darken-4 white-text" %></li>
         </ul>
       </div>
       
       <!--Second Column Footer-->
-      <div class="col l2 offset-l2 s12 center social-home">
+      <div class="col l3 offset-l1 s12 center social-home">
         <!--Facebook Link-->
         <%= link_to '#' do %>
           <i class="fa fa-facebook fa-2x btn-floating btn-large waves-effect waves-light black"></i>
