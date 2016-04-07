@@ -55,6 +55,9 @@ footer .row .col.offset-l2 {
 
 @media only screen and (max-width: 350px) {
   .brand-logo {
-    padding-left: 1em !important;
-  } 
+    padding-left: 2em !important;
+  }
+  a.button-collapse {
+    padding-left: 1em;
+  }
 }
