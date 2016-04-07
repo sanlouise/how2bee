@@ -8115,6 +8115,7 @@ small {
   transition: .3s;
   cursor: pointer;
   vertical-align: middle;
+  margin: 0.5em;
 }
 
 .btn-floating i {
