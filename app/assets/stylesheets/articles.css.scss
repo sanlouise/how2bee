@@ -8,6 +8,27 @@ p #notice {
   color: black;
 }
 
-.article-content ol li {
-  padding: 1em 0 1em 0;
+.article-content {
+  background-color: white;
+  border: 2px solid #999999;
+  padding: 1em;
+  border-radius: 1em;
+  p {
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+  }
+  ol li {
+    padding: 1em 0 1em 0;
+  }
+}
+
+.article-image {
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.article {
+  background-color: #eaeaea;
+  padding: 2em 0 3em 0;
+  margin: -1em 0 -1.2em 0;
 }

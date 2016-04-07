@@ -1,16 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<div class="row">
-  <div class="col s12 m8 offset-m2 l6 offset-l3">
-    <div class="center responsive-img">
-      <%= image_tag(@article.image, class: "responsive-img") %>
+<section class="article">
+  <p id="notice"><%= notice %></p>
+  
+  <div class="row">
+    <div class="col s12 m8 offset-m2">
+      <p class="center"><%= link_to 'Back to Articles', articles_path, class: "btn waves-effect waves-light indigo" %></p>
+      <h2 class="center orange-text"><%= @article.title %></h2>
+      <div class="center">
+        <%= image_tag(@article.image, class: "article-image responsive-img z-depth-1") %>
+      </div>
+      <section class="article-content flow-text">
+        <%= @article.content.html_safe %>
+      </section>
     </div>
-    <h2 class="center"><%= @article.title %></h2>
-    <p class="center"><%= link_to 'Back to Articles', articles_path, class: "btn waves-effect waves-light blue" %></p>
-    <section class="article-content flow-text">
-      <%= @article.content.html_safe %>
-    </section>
   </div>
-</div>
-
-
+</section>
