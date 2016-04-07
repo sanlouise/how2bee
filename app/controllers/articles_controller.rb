@@ -66,7 +66,7 @@ class ArticlesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
-      @article = Article.find(params[:id])
+      @article = Article.find_by_title(params[:id])
     end
     
     def set_articles
@@ -76,5 +76,9 @@ class ArticlesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:title, :content, :description, :image)
+    end
+    
+    def to_param
+      "#{title}"
     end
 end

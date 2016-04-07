@@ -23,15 +23,15 @@
         <div class="card orange">
           <!--Image-->
           <div class="card-image waves-effect waves-block waves-light">
-            <%= link_to image_tag(article.image), article_path(article) if article.image %>
+            <%= link_to image_tag(article.image), article_path(article.title) %>
           </div>
           <div class="card-content white-text center">
             <span class="card-title">
               <!--Title-->
-              <%= link_to article.title, article_path(article) %>
+              <%= link_to article.title, article_path(article.title) %>
             </span>
             <!--Date-->
-            <p><%= link_to article.description, article_path(article) %></p>
+            <p><%= link_to article.description, article_path(article.title) %></p>
           </div>
         </div>
       </div>
